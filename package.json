@@ -14,7 +14,7 @@
   },
   "author": "Rotem Grimberg <rotemgrim@gmail.com>",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies": {
     "typie-sdk": "github:typie/typie-sdk"
   },
   "typie": {

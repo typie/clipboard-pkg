@@ -1,7 +1,7 @@
 const {shell, clipboard} = require('electron');
-const {AbstractHastePackage, HasteRowItem, SearchObject} = require('haste-sdk');
+const {AbstractTypiePackage, TypieRowItem, SearchObject} = require('typie-sdk');
 
-class Clipboard extends AbstractHastePackage {
+class Clipboard extends AbstractTypiePackage {
 
     constructor(win, config, pkgPath){
         super(win, config, pkgPath);
@@ -23,15 +23,15 @@ class Clipboard extends AbstractHastePackage {
         this.win.hide();
         this.lastPaste = item.getPath();
         clipboard.writeText(item.getPath());
-        this.haste.updateCalled(item).go()
+        this.typie.updateCalled(item).go()
             .then(()=>{
-                this.haste.pasteText().go();
+                this.typie.pasteText().go();
             })
             .catch(()=>{});
     }
 
-    activateUponEntry(pkgList, item) {
-        this.haste.getRows(10).orderBy('unixTime').desc().go()
+    enterPkg(pkgList, item, cb) {
+        this.typie.getRows(10).orderBy('unixTime').desc().go()
             .then(res => {
                 console.log('retured from unixTime fetch', res);
                 this.win.send('resultList', res);

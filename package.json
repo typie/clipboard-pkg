@@ -1,8 +1,13 @@
 {
   "name": "clipboard-pkg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Saves & manage your clipboard history",
-  "keywords": ["typie", "typie key launcher", "typie package", "clipboard"],
+  "keywords": [
+    "typie",
+    "typie key launcher",
+    "typie package",
+    "clipboard"
+  ],
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -10,11 +15,14 @@
   "author": "Rotem Grimberg <rotemgrim@gmail.com>",
   "license": "ISC",
   "dependencies": {
-    "typie-sdk": "github:typie/tyipe-sdk"
+    "typie-sdk": "github:typie/typie-sdk"
   },
   "typie": {
     "title": "Clipboard",
-    "labels": ["WIN", "MAC"],
+    "labels": [
+      "win",
+      "mac"
+    ],
     "description": "Saves & manage your clipboard history"
   }
 }

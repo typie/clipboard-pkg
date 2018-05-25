@@ -33,7 +33,6 @@ class Clipboard extends AbstractTypiePackage {
     enterPkg(pkgList, item, cb) {
         this.typie.getRows(10).orderBy('unixTime').desc().go()
             .then(res => {
-                console.log('retured from unixTime fetch', res);
                 this.win.send('resultList', res);
                 this.win.show();
             })

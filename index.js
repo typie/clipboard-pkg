@@ -1,5 +1,5 @@
-const {shell, clipboard} = require('electron');
-const {AbstractTypiePackage, TypieRowItem, SearchObject} = require('typie-sdk');
+const { clipboard } = require('electron');
+const { AbstractTypiePackage } = require('typie-sdk');
 
 class Clipboard extends AbstractTypiePackage {
 
@@ -7,7 +7,7 @@ class Clipboard extends AbstractTypiePackage {
         super(win, config, pkgPath);
         this.win         = win;
         this.packageName = 'Clipboard';
-        this.intervalTime  = 250; // milliseconds
+        this.intervalTime  = 250; // milliseconds -> do not lower below 250
         this.watchInterval = null;
         this.lastPaste = clipboard.readText();
         this.startWatch();

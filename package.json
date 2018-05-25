@@ -1,6 +1,6 @@
 {
   "name": "clipboard-pkg",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Saves & manage your clipboard history",
   "keywords": [
     "typie",
@@ -14,14 +14,20 @@
   },
   "author": "Rotem Grimberg <rotemgrim@gmail.com>",
   "license": "ISC",
-  "devDependencies": {
+  "dependencies": {
     "typie-sdk": "github:typie/typie-sdk"
   },
   "typie": {
     "title": "Clipboard",
     "labels": [
-      "win",
-      "mac"
+      {
+        "text": "Windows",
+        "style": "green"
+      },
+      {
+        "text": "Mac",
+        "style": "orange"
+      }
     ],
     "description": "Saves & manage your clipboard history"
   }

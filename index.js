@@ -1,5 +1,5 @@
 const { clipboard } = require('electron');
-const { AbstractTypiePackage } = require('typie-sdk');
+const { AbstractTypiePackage, TypieRowItem } = require('typie-sdk');
 
 class Clipboard extends AbstractTypiePackage {
 
@@ -28,6 +28,15 @@ class Clipboard extends AbstractTypiePackage {
                 this.typie.pasteText().go();
             })
             .catch(()=>{});
+    }
+
+    remove(pkgList, item, cb) {
+        if (!TypieRowItem.isPackage(item)) {
+            this.typie.remove(item).go()
+                .then(data => {
+                    this.win.send("deleteItem", item);
+                }).catch(e => console.error(e));
+        }
     }
 
     enterPkg(pkgList, item, cb) {

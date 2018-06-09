@@ -1,6 +1,6 @@
 {
   "name": "clipboard-pkg",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Saves & manage your clipboard history",
   "keywords": [
     "typie",
@@ -16,6 +16,10 @@
   "license": "ISC",
   "dependencies": {
     "typie-sdk": "github:typie/typie-sdk"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/typie/clipboard-pkg.git"
   },
   "typie": {
     "title": "Clipboard",

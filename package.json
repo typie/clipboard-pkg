@@ -1,6 +1,6 @@
 {
   "name": "clipboard-pkg",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Saves & manage your clipboard history",
   "keywords": [
     "typie",
@@ -19,7 +19,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/typie/clipboard-pkg.git"
+    "url": "https://github.com/typie/clipboard-pkg.git"
   },
   "typie": {
     "title": "Clipboard",
